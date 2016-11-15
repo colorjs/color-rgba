@@ -6,7 +6,7 @@ Convert color string to array with channels: `rgba(127,127,127,.1)` → `[.5,.5,
 
 [![npm install color-rgba](https://nodei.co/npm/color-rgba.png?mini=true)](https://npmjs.org/package/color-rgba/)
 
-## `rgba(string|array, normalize = true)`
+### `rgba(string|array, normalize = true)`
 
 Returns array with channel values, optionally normalized to _0..1_ range.
 
