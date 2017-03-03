@@ -1,6 +1,6 @@
 {
   "name": "color-rgba",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert color string to rgba array",
   "main": "index.js",
   "scripts": {
