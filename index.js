@@ -11,6 +11,8 @@ module.exports = function rgba (color, normalize = true) {
 
 	let parsed = parse(color);
 
+	if (!parsed.space) return null;
+
 	parsed.values = parsed.values.map(v => clamp(v, 0, 255))
 
 	if (parsed.space[0] === 'h') {
