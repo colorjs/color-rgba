@@ -2,29 +2,34 @@
 
 'use strict'
 
-const parse = require('color-parse')
-const hsl = require('color-space/hsl')
-const clamp = require('clamp')
+var parse = require('color-parse')
+var hsl = require('color-space/hsl')
+var clamp = require('clamp')
 
-module.exports = function rgba (color, normalize = true) {
-	let channels;
+module.exports = function rgba (color, normalize) {
+	if (normalize == null) normalize = true
 
-	let parsed = parse(color);
+	var parsed = parse(color);
 
 	if (!parsed.space) return null;
 
-	parsed.values = parsed.values.map(v => clamp(v, 0, 255))
+	var values = parsed.values, i, l = values.length;
+	for (i = 0; i < l; i++) {
+		values[i] = clamp(values[i], 0, 255)
+	}
 
 	if (parsed.space[0] === 'h') {
-		parsed.values = hsl.rgb(parsed.values)
+		values = hsl.rgb(values)
 	}
 
 	if (normalize) {
-		parsed.values = parsed.values.map(v => v/255)
+		for (i = 0; i < l; i++) {
+			values[i] /= 255
+		}
 	}
 
-	parsed.values.push(clamp(parsed.alpha, 0, 1))
+	values.push(clamp(parsed.alpha, 0, 1))
 
-	return parsed.values
+	return values
 }
 
