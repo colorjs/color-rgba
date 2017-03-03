@@ -13,6 +13,8 @@ module.exports = function rgba (color, normalize) {
 
 	if (!parsed.space) return null;
 
+	if (Array.isArray(color)) return color;
+
 	var values = parsed.values, i, l = values.length;
 	for (i = 0; i < l; i++) {
 		values[i] = clamp(values[i], 0, 255)
