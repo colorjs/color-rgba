@@ -11,7 +11,7 @@ module.exports = function rgba (color, normalize) {
 
 	var parsed = parse(color);
 
-	if (!parsed.space) return null;
+	if (!parsed.space) return [];
 
 	if (Array.isArray(color)) return color;
 
