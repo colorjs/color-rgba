@@ -1,5 +1,7 @@
 #color-rgba
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/colorjs/color-rgba.svg)](https://greenkeeper.io/)
+
 Convert color string to array with channels: `rgba(127,127,127,.1)` → `[.5,.5,.5,.1]`
 
 ## Usage
