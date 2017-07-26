@@ -7,13 +7,13 @@ var hsl = require('color-space/hsl')
 var clamp = require('clamp')
 
 module.exports = function rgba (color, normalize) {
+	if (Array.isArray(color)) return color;
+
 	if (normalize == null) normalize = true
 
 	var parsed = parse(color);
 
 	if (!parsed.space) return [];
-
-	if (Array.isArray(color)) return color;
 
 	var values = parsed.values, i, l = values.length;
 	for (i = 0; i < l; i++) {
