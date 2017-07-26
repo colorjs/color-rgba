@@ -1,4 +1,4 @@
-# color-rgba
+# color-rgba [![Build Status](https://travis-ci.org/colorjs/color-rgba.png)](https://travis-ci.org/colorjs/color-rgba)
 
 Convert color string to array with channels: `rgba(127,127,127,.1)` → `[.5,.5,.5,.1]`
 
