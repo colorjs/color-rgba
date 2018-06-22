@@ -16,8 +16,7 @@ assert.deepEqual(rgba('xyz'), [])
 // console.log(rgba('hsla(170, 50%, 45%, 1)'))
 
 assert.deepEqual(rgba(0x00ff00), [0, 255, 0, 1])
+assert.deepEqual(rgba(new Number(0x00ff00)), [0, 255, 0, 1])
 
-assert.throws(() => {
-	rgba([1,1,1,1])
-	rgba(new Uint8Array([255, 255, 255, 255]))
-})
+assert.deepEqual(rgba([1,1,1,1]), [1,1,1,1])
+assert.deepEqual(rgba(new Uint8Array([255, 255, 255, 255])), [255,255,255,1])
