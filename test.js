@@ -10,9 +10,12 @@ assert.deepEqual(rgba('red'), [255, 0, 0, 1])
 assert.deepEqual(rgba('rgb(80, 120, 160)'), [80, 120, 160, 1])
 assert.deepEqual(rgba('rgba(80, 120, 160, .5)'), [80, 120, 160, .5])
 assert.deepEqual(rgba('hsla(109, 50%, 50%, .75)'), [87.125, 191.25, 63.75, .75])
+assert.deepEqual(rgba('#f00'), [255, 0, 0, 1])
 
 assert.deepEqual(rgba('xyz'), [])
 // console.log(rgba('hsla(170, 50%, 45%, 1)'))
+
+assert.deepEqual(rgba(0x00ff00), [0, 255, 0, 1])
 
 assert.throws(() => {
 	rgba([1,1,1,1])

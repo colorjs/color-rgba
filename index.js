@@ -9,7 +9,7 @@ var clamp = require('clamp')
 module.exports = function rgba (color) {
 	var values, i, l
 
-	if (typeof color !== 'string') throw Error('Argument should be a string')
+	if (typeof color !== 'string' && typeof color !== 'number') throw Error('Argument should be a string')
 
 	//attempt to parse non-array arguments
 	var parsed = parse(color)
