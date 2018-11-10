@@ -15,12 +15,18 @@ rgba('rgba(80, 120, 160, .5)') // [80, 120, 160, .5]
 rgba('hsla(109, 50%, 50%, .75)') // [87.125, 191.25, 63.75, .75]
 ```
 
+## API
+
+### `let [r, g, b, alpha] = rgba(color)`
+
+Returns channels values as they are in the input `color` string argument. `alpha` is always from `0..1` range.
+
 ## Related
 
+* [color-normalize](https://github.com/colorjs/color-normalize) − convert any input color argument into a defined output format.
 * [color-alpha](https://github.com/colorjs/color-alpha) − change alpha of a color string.
 * [color-interpolate](https://github.com/colorjs/color-interpolate) − interpolate by color palette.
 * [color-parse](https://github.com/colorjs/color-parse) − comprehensive color string parser.
-* [color-normalize](https://github.com/colorjs/color-normalize) − ensure color format.
 
 ## License
 
