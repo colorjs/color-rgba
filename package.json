@@ -1,6 +1,6 @@
 {
   "name": "color-rgba",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Convert color string (or parseable argument) to RGBA array",
   "main": "index.js",
   "scripts": {
