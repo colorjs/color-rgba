@@ -1,4 +1,4 @@
-# color-rgba [![Build Status](https://travis-ci.org/colorjs/color-rgba.png)](https://travis-ci.org/colorjs/color-rgba) [![size](https://img.shields.io/bundlephobia/minzip/color-rgba?label=size)](https://bundlephobia.com/result?p=color-rgba) ![stable](https://img.shields.io/badge/stability-unstable-yellow)
+# color-rgba [![Build Status](https://travis-ci.org/colorjs/color-rgba.png)](https://travis-ci.org/colorjs/color-rgba) [![size](https://img.shields.io/bundlephobia/minzip/color-rgba?label=size)](https://bundlephobia.com/result?p=color-rgba) ![stable](https://img.shields.io/badge/stability-stable-green)
 
 Convert color string to array with rgba channel values: `"rgba(127,127,127,.1)"` → `[127,127,127,.1]`.
 
