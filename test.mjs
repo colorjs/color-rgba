@@ -1,5 +1,5 @@
 import assert from 'assert'
-import rgba from './index.js'
+import rgba from './index.mjs'
 
 assert.deepEqual(rgba('rgba(1,2,3,.5)'), [1,2,3,.5])
 assert.deepEqual(rgba('rgba(0,0,0,0)'), [0,0,0,0])
