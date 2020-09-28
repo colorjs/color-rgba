@@ -7,7 +7,7 @@ var hsl = require('color-space/hsl')
 
 module.exports = function rgba (color) {
 	// template literals
-	if (Array.isArray(color) && color.raw) color = String.raw.apply(null, ...arguments)
+	if (Array.isArray(color) && color.raw) color = String.raw.apply(null, arguments)
 
 	var values, i, l
 
