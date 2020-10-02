@@ -3,6 +3,7 @@
   "version": "2.2.2",
   "description": "Convert color string (or parseable argument) to RGBA array",
   "main": "index.js",
+  "browser": "index.js",
   "module": "./index.mjs",
   "scripts": {
     "test": "node test.mjs"
