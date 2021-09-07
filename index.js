@@ -26,7 +26,7 @@ module.exports = function rgba (color) {
 	values[2] = Math.min(Math.max(parsed.values[2], minLimits[2]), maxLimits[2])
 
 	if (parsed.space[0] === 'h') {
-		values = hsl.rgb(values).map(Math.round)
+		values = hsl.rgb(values)
 	}
 
 	values.push(Math.min(Math.max(parsed.alpha, 0), 1))
