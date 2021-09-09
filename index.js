@@ -3,6 +3,7 @@
 'use strict'
 
 var parse = require('color-parse')
+var rgb = require('color-space/rgb')
 var hsl = require('color-space/hsl')
 
 module.exports = function rgba (color) {
@@ -16,10 +17,13 @@ module.exports = function rgba (color) {
 
 	if (!parsed.space) return []
 
+	var min = parsed.space[0] === 'h' ? hsl.min : rgb.min
+	var max = parsed.space[0] === 'h' ? hsl.max : rgb.max
+
 	values = Array(3)
-	values[0] = Math.min(Math.max(parsed.values[0], 0), 255)
-	values[1] = Math.min(Math.max(parsed.values[1], 0), 255)
-	values[2] = Math.min(Math.max(parsed.values[2], 0), 255)
+	values[0] = Math.min(Math.max(parsed.values[0], min[0]), max[0])
+	values[1] = Math.min(Math.max(parsed.values[1], min[1]), max[1])
+	values[2] = Math.min(Math.max(parsed.values[2], min[2]), max[2])
 
 	if (parsed.space[0] === 'h') {
 		values = hsl.rgb(values)
