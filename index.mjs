@@ -14,13 +14,13 @@ export default function rgba (color) {
 
 	if (!parsed.space) return []
 
-	const minLimits = parsed.space[0] === 'h' ? hsl.min : rgb.min
-	const maxLimits = parsed.space[0] === 'h' ? hsl.max : rgb.max
+	const min = parsed.space[0] === 'h' ? hsl.min : rgb.min
+	const max = parsed.space[0] === 'h' ? hsl.max : rgb.max
 
 	values = Array(3)
-	values[0] = Math.min(Math.max(parsed.values[0], minLimits[0]), maxLimits[0])
-	values[1] = Math.min(Math.max(parsed.values[1], minLimits[1]), maxLimits[1])
-	values[2] = Math.min(Math.max(parsed.values[2], minLimits[2]), maxLimits[2])
+	values[0] = Math.min(Math.max(parsed.values[0], min[0]), max[0])
+	values[1] = Math.min(Math.max(parsed.values[1], min[1]), max[1])
+	values[2] = Math.min(Math.max(parsed.values[2], min[2]), max[2])
 
 	if (parsed.space[0] === 'h') {
 		values = hsl.rgb(values)
