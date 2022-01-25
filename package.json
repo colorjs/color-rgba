@@ -6,7 +6,7 @@
   "browser": "index.js",
   "module": "./index.mjs",
   "scripts": {
-    "test": "node test.mjs"
+    "test": "node test.mjs && node test.cjs"
   },
   "exports": {
     "import": "./index.mjs",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/colorjs/color-rgba#readme",
   "dependencies": {
-    "color-parse": "^1.4.1",
-    "color-space": "^1.14.6"
+    "color-parse": "^1.4.2",
+    "color-space": "^2.0.0"
   }
 }
