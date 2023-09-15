@@ -30,4 +30,4 @@ Returns channels values as they are in the input `color` string argument. `alpha
 
 ## License
 
-(c) 2017 Dima Yv. MIT License
+(c) 2017 Dmitry Iv. MIT License
