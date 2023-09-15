@@ -28,6 +28,5 @@ Returns channels values as they are in the input `color` string argument. `alpha
 * [color-alpha](https://github.com/colorjs/color-alpha) − change alpha of a color string.
 * [color-interpolate](https://github.com/colorjs/color-interpolate) − interpolate by color palette.
 
-## License
 
-(c) 2017 Dmitry Iv. MIT License
+<p align=center><a href="https://github.com/krsnzd/license/">🕉</a></p>
