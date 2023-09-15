@@ -4,13 +4,10 @@
   "description": "Convert color string (or parseable argument) to RGBA array",
   "main": "index.js",
   "browser": "index.js",
-  "module": "./index.mjs",
+  "type": "module",
+  "module": "./index.js",
   "scripts": {
-    "test": "node test.mjs && node test.cjs"
-  },
-  "exports": {
-    "import": "./index.mjs",
-    "require": "./index.js"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -24,14 +21,14 @@
     "color-space",
     "css"
   ],
-  "author": "Dmitry Yv <dfcreative@gmail.com>",
+  "author": "Dmitry Iv <dfcreative@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/colorjs/color-rgba/issues"
   },
   "homepage": "https://github.com/colorjs/color-rgba#readme",
   "dependencies": {
-    "color-parse": "^1.4.2",
+    "color-parse": "^2.0.0",
     "color-space": "^2.0.0"
   }
 }
