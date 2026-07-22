@@ -7,12 +7,14 @@ Convert color string to array with rgba channel values: `"rgba(127,127,127,.1)"`
 [![npm install color-rgba](https://nodei.co/npm/color-rgba.png?mini=true)](https://npmjs.org/package/color-rgba/)
 
 ```js
-const rgba = require('color-rgba')
+import rgba from 'color-rgba'
 
 rgba('red') // [255, 0, 0, 1]
 rgba('rgb(80, 120, 160)') // [80, 120, 160, 1]
 rgba('rgba(80, 120, 160, .5)') // [80, 120, 160, .5]
 rgba('hsla(109, 50%, 50%, .75)') // [87.125, 191.25, 63.75, .75]
+rgba('oklch(0.628 0.258 29.234)') // [255, 0, 0, 1]
+rgba('color(display-p3 1 0 0)') // [255, 0, 0, 1]
 rgba`rgb(80 120 160 / 50%)` // [80, 120, 160, .5]
 ```
 
@@ -20,7 +22,7 @@ rgba`rgb(80 120 160 / 50%)` // [80, 120, 160, .5]
 
 ### `let [r, g, b, alpha] = rgba(color)`
 
-Returns channels values as they are in the input `color` string argument. `alpha` is always from `0..1` range. `color` can be a CSS color string, an array with channel values, an object etc., see [color-parse](https://ghub.io/color-parse).
+Returns rgba channel values for any string [color-parse](https://ghub.io/color-parse) recognizes: hex, keywords, `rgb[a]()`, `hsl[a]()`/`hsv()`/`hwb()`, `cmyk()`, `lab()`/`lch()`, `oklab()`/`oklch()`, `luv()`/`lchuv()`, `xyz()`/`xyy()`, `color(srgb | srgb-linear | display-p3 | a98-rgb | prophoto-rgb | rec2020 | xyz-d50 | xyz-d65 …)` — plus arrays, numbers and template literals. Conversions come from [color-space](https://ghub.io/color-space). `r`, `g`, `b` are `0..255`, `alpha` is `0..1`; hues wrap per CSS, other channels clamp into their documented ranges. Unrecognized input returns `[]`.
 
 ## Related
 

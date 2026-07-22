@@ -1,11 +1,17 @@
 {
   "name": "color-rgba",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Convert color string (or parseable argument) to RGBA array",
   "main": "index.js",
   "browser": "index.js",
   "type": "module",
   "module": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "node test.js"
   },
@@ -28,7 +34,7 @@
   },
   "homepage": "https://github.com/colorjs/color-rgba#readme",
   "dependencies": {
-    "color-parse": "^2.0.0",
-    "color-space": "^2.0.0"
+    "color-parse": "^2.1.0",
+    "color-space": "^3.1.0"
   }
 }
