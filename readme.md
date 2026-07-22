@@ -4,7 +4,7 @@ Convert color string to array with rgba channel values: `"rgba(127,127,127,.1)"`
 
 ## Usage
 
-[![npm install color-rgba](https://nodei.co/npm/color-rgba.png?mini=true)](https://npmjs.org/package/color-rgba/)
+`$ npm install color-rgba`
 
 ```js
 import rgba from 'color-rgba'
